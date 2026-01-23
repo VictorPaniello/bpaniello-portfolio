@@ -1,0 +1,50 @@
+import React from "react";
+
+export default function Home() {
+    return (
+        <div className="min-h-screen bg-white">
+          {/* Navigation Header */}
+            <header className="border-b border-gray-200">
+                <nav className="max-w-6xl mx-auto px-4 py-4">
+                    <div className="flex justify-between items-center">
+                        <h1 className="text-xl font-semibold">Blanca Paniello</h1>
+                    </div>
+                </nav>
+            </header>
+        
+          {/* Main Content */}
+            <main className="max-w-4xl mx-auto px-4 py-12">
+                {/* Hero Section */}
+                <section className="mb-12">
+                    <h2 className="text-4xl font-bold mb-4">Welcome</h2>
+                    <p className="text-lg text-gray-600 mb-6">
+                        Brief introduction about yourself and your work in biomedicine.
+                    </p>
+                </section>
+                {/* Quick Links Section */}
+                <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <a href="/publications" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
+                        <h3 className="text-xl font-semibold mb-2">Publications</h3>
+                        <p className="text-gray-600">View my research publications</p>
+                    </a>
+                    <a href="/projects" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
+                        <h3 className="text-xl font-semibold mb-2">Projects</h3>
+                        <p className="text-gray-600">Explore my research projects</p>
+                    </a>
+                    <a href="/cv" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
+                        <h3 className="text-xl font-semibold mb-2">CV</h3>
+                        <p className="text-gray-600">Download my curriculum vitae</p>
+                    </a>
+                </section>
+
+            {/* Contact Section */}
+            <section>
+                <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+                <p className="text-gray-700">
+                Email: your.email@example.com
+                    </p>
+                </section>
+            </main>
+        </div>
+    );
+}
