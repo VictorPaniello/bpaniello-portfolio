@@ -34,6 +34,23 @@ interface Project {
     endDate?: string;
 }
 
+interface Profile {
+    name: string;
+    title?: string;
+    email: string;
+    location?: string;
+    bio: string;
+    orcidId?: string;
+    researchInterests?: string[];
+    education: Education[];
+    certifications?: Certification[];
+    experience?: Experience[];
+    links?: {
+        website?: string;
+        linkedin?: string;
+    };
+}
+
 interface Education {
     degree: string;
     institution: string;
@@ -66,4 +83,4 @@ interface Experience {
     researchFocus?: string[];
 }
 
-export type { Publication, Project, Education, Certification, Experience };
+export type { Publication, Project, Profile, Education, Certification, Experience };

@@ -31,6 +31,10 @@ export default function Home() {
                         <h3 className="text-xl font-semibold mb-2">Projects</h3>
                         <p className="text-gray-600">Explore my research projects</p>
                     </a>
+                    <a href="/profile" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
+                        <h3 className="text-xl font-semibold mb-2">Profile</h3>
+                        <p className="text-gray-600">View my profile</p>
+                    </a>
                     <a href="/cv" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
                         <h3 className="text-xl font-semibold mb-2">CV</h3>
                         <p className="text-gray-600">Download my curriculum vitae</p>
