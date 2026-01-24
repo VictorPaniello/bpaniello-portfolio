@@ -1,13 +1,29 @@
 import type { Profile } from "../lib/schema";
+import type { Education } from "../lib/schema";
 
-const profile: Profile = {
+export const profile = {
     name: "Blanca Paniello",
-    title: "Dr. ",
+    title: "Dr.",
     email: "blancapaniello@blancapaniello.com",
     location: "Barcelona",
-    bio: "BlaBlaBla",
-    orcidId: "",
-    researchInterests: [""],
-    education:,
-
-}
+    bio: "Your professional bio here...",
+    orcidId: "0000-0002-xxxx-xxxx",
+    education: [
+    {
+        degree: "PhD in Medicine",
+        institution: "University Name",
+        startDate: "2018",
+        endDate: "2022",
+        location: "Barcelona, Spain",
+    },
+    ],
+    experience: [
+    {
+        company: "Hospital Name",
+        position: "Research Position",
+        startDate: "2022-01",
+        description: "What you did here...",
+        type: "research",
+    },
+    ],
+};
