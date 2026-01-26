@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react";
 import ReactDOM from 'react-dom'
 import { Moon, Sun } from 'lucide-react'
@@ -6,14 +8,14 @@ import Link from 'next/link'
 
 
 import { Button } from '@/components/ui/button'
-import { NavigationMenuItem, NavigationMenu, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
+import { NavigationMenuItem, NavigationMenu, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from '@/components/ui/dropdown-menu'
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function Home() {
     return (
         <div className="relative min-h-screen">
-          {/* Navigation Header */}
+            {/* Navigation Header */}
             <header className="border-b border-gray-200/50 backdrop-blur-sm">
                 <nav className="max-w-6xl mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
@@ -21,33 +23,33 @@ export default function Home() {
                         <NavigationMenu>
                             <NavigationMenuList>
                                 <NavigationMenuItem>
-                                    <Link href="/" passHref>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}></NavigationMenuLink>
+                                    <Link href="/">
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <Link href="/projects" passHref>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Articles</NavigationMenuLink>
+                                    <Link href="/projects">
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Articles</NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <Link href="/" passHref>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Seminars / Teaching</NavigationMenuLink>
+                                    <Link href="/">
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Seminars / Teaching</NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <Link href="/" passHref>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Media</NavigationMenuLink>
+                                    <Link href="/">
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Media</NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <Link href="/about-me" passHref>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>About Me</NavigationMenuLink>
+                                    <Link href="/about-me">
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Me</NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
-                                    <Link href="/" passHref>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
+                                    <Link href="/">
+                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
@@ -56,8 +58,7 @@ export default function Home() {
                     </div>
                 </nav>
             </header>
-        
-          {/* Main Content */}
+            {/* Main Content */}
             <main className="max-w-4xl mx-auto px-4 py-12">
                 {/* Hero Section */}
                 <section className="mb-12">
@@ -72,27 +73,15 @@ export default function Home() {
                         <h3 className="text-xl font-semibold mb-2">Publications</h3>
                         <p className="text-gray-600">View my research publications</p>
                     </a>
-                    <a href="/projects" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
-                        <h3 className="text-xl font-semibold mb-2">Projects</h3>
-                        <p className="text-gray-600">Explore my research projects</p>
-                    </a>
-                    <a href="/about-me" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
-                        <h3 className="text-xl font-semibold mb-2">About Me</h3>
-                        <p className="text-gray-600">View my profile</p>
-                    </a>
-                    <a href="/cv" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
-                        <h3 className="text-xl font-semibold mb-2">CV</h3>
-                        <p className="text-gray-600">Download my curriculum vitae</p>
-                    </a>
                 </section>
 
-            {/* Contact Section */}
-            <section>
+                {/* Contact Section */}
+                <footer>
                 <h2 className="text-2xl font-semibold mb-4">Contact</h2>
                 <p className="text-gray-700">
                 Email: your.email@example.com
                     </p>
-                </section>
+                </footer>
             </main>
         </div>
     );
