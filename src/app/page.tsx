@@ -2,26 +2,15 @@ import * as React from "react";
 import ReactDOM from 'react-dom'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 
-import CardNav from '@/components/CardNav'
 
 import { Button } from '@/components/ui/button'
+import { NavigationMenuItem, NavigationMenu, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from '@/components/ui/dropdown-menu'
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function Home() {
-    const items = [
-        {
-            label: "About",
-            bgColor: "#fff",
-            textColor: "#000",
-            links: [
-                { label: "Company", ariaLabel: "About Company"},
-                { label: "Career", ariaLabel: "About Career"}
-            ]
-        }
-    ];
-    
     return (
         <div className="relative min-h-screen">
           {/* Navigation Header */}
@@ -29,20 +18,44 @@ export default function Home() {
                 <nav className="max-w-6xl mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
                         <h1 className="text-xl font-semibold">Blanca Paniello</h1>
+                        <NavigationMenu>
+                            <NavigationMenuList>
+                                <NavigationMenuItem>
+                                    <Link href="/" passHref>
+                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}></NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link href="/projects" passHref>
+                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Articles</NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link href="/" passHref>
+                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Seminars / Teaching</NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link href="/" passHref>
+                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Media</NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link href="/about-me" passHref>
+                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>About Me</NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link href="/" passHref>
+                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+                            </NavigationMenuList>
+                        </NavigationMenu>
                         <ModeToggle />
                     </div>
                 </nav>
             </header>
-
-        <CardNav
-            logoAlt="Company Logo"
-            items={items}
-            baseColor="#fff"
-            menuColor="#000"
-            buttonBgColor="#111"
-            buttonTextColor="#fff"
-            ease="power3.out"
-            />
         
           {/* Main Content */}
             <main className="max-w-4xl mx-auto px-4 py-12">
