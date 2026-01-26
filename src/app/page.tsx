@@ -17,71 +17,8 @@ import { faEnvelope, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Home() {
-    
-    const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault()
-        const contactSection = document.getElementById('contact')
-        contactSection?.scrollIntoView({ behavior: 'smooth' })
-    }
-
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
-
-    return (
+        return (
         <div className="relative min-h-screen">
-            {/* Navigation Header */}
-            <header className="border-b border-gray-200/50 backdrop-blur-sm">
-                <nav className="max-w-7xl mx-auto px-0 py-4">
-                    <div className="flex justify-between items-center">
-                        <h1 className="text-xl font-semibold">Blanca Paniello-Castillo</h1>
-                        <div className="flex justify-between items-end">
-                            <NavigationMenu>
-                                <NavigationMenuList>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            <Link href="/">Home</Link>
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            <Link href="/articles">Articles</Link>
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            <Link href="/">Seminars / Teaching</Link>
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            <Link href="/media">Media</Link>
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            <Link href="/about-me">About Me</Link>
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            <Link href="/volunteering">Volunteering</Link>
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                    <NavigationMenuItem>
-                                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                            <Link href="#contact" onClick={handleContactClick}><FontAwesomeIcon icon={faEnvelope} bounce style={{
-                                                '--fa-animation-delay': '2s',
-                                                '--fa-animation-iteration-count': '3',
-                                                } as any} />&nbsp;Contact</Link>
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                </NavigationMenuList>
-                            </NavigationMenu>
-                        </div>
-                    </div>
-                </nav>
-            </header>
             {/* Main Content */}
             <main className="max-w-7xl mx-auto px-2 py-12">
                 {/* Hero Section */}
@@ -108,23 +45,6 @@ export default function Home() {
                     </a>
                 </section>
             </main>
-            {/* Contact Section */}
-            <footer id="contact" className="bg-gray-100 dark:bg-gray-900 rounded-lg p-10 mt-20 w-full">
-                <div className="max-w-7xl mx-auto px-2">
-                    <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-                    <p className="text-gray-700 dark:text-gray-300">Email: your.email@example.com</p>
-                </div>
-            </footer>
-
-            {/* Floating Button */}
-            <button
-                onClick={scrollToTop}
-                className="fixed bottom-8 right-8 hover:opacity-80 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50 cursor-pointer"
-                style={{ backgroundColor: 'var(--foreground)' }}
-                aria-label="Scroll to top"
-            >
-                <FontAwesomeIcon icon={faArrowUp} size="lg" />
-            </button>
         </div>
     );
 }
