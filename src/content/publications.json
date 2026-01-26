@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Your Publication Title",
+    "authors": ["Paniello, B.", "CoAuthor, J."],
+    "year": 2024,
+    "publicationType": "journal",
+    "abstract": "Optional abstract text...",
+    "links": {
+        "doi": "10.1234/example",
+        "pubmed": "10.1234/example",
+        "website": "10.1234/example"
+    }
+  }
+]

@@ -1,7 +1,7 @@
-import type { Profile } from "../lib/schema";
+import type { AboutMe } from "../lib/schema";
 import type { Education } from "../lib/schema";
 
-export const profile = {
+export const aboutMe = {
     name: "Blanca Paniello",
     title: "Dr.",
     email: "blancapaniello@blancapaniello.com",

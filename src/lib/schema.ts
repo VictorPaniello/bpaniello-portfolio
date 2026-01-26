@@ -1,9 +1,9 @@
 interface Publication {
+    id: number;
     title: string;
     authors: string[];
     year: number;
     journal?: string;
-    doi?: string;
     pubmedId?: string;
     publicationType: "journal" | "book" | "thesis" | "conference" | "preprint" | "other";
     pages?: string;
@@ -34,7 +34,7 @@ interface Project {
     endDate?: string;
 }
 
-interface Profile {
+interface AboutMe {
     name: string;
     title?: string;
     email: string;
@@ -83,4 +83,4 @@ interface Experience {
     researchFocus?: string[];
 }
 
-export type { Publication, Project, Profile, Education, Certification, Experience };
+export type { Publication, Project, AboutMe, Education, Certification, Experience };

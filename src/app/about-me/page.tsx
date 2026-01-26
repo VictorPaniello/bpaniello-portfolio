@@ -1,10 +1,10 @@
 // src/app/cv/page.tsx
-import { profile } from '../../content/profile';
+import { aboutMe } from '../../content/aboutMe';
 
 export default function CVPage() {
     return (
         <div>
-        <h1>{profile.name}</h1>
+        <h1>{aboutMe.name}</h1>
         <section>
             <h2>Education</h2>
         </section>

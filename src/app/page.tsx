@@ -1,13 +1,23 @@
-import React from "react";
+import * as React from "react";
+import ReactDOM from 'react-dom'
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
+
+import CardNav from '@/components/CardNav'
+
+import { Button } from '@/components/ui/button'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from '@/components/ui/dropdown-menu'
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="relative min-h-screen">
           {/* Navigation Header */}
-            <header className="border-b border-gray-200">
+            <header className="border-b border-gray-200/50 bg-white/80 backdrop-blur-sm">
                 <nav className="max-w-6xl mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
                         <h1 className="text-xl font-semibold">Blanca Paniello</h1>
+                        <ModeToggle />
                     </div>
                 </nav>
             </header>
@@ -31,8 +41,8 @@ export default function Home() {
                         <h3 className="text-xl font-semibold mb-2">Projects</h3>
                         <p className="text-gray-600">Explore my research projects</p>
                     </a>
-                    <a href="/profile" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
-                        <h3 className="text-xl font-semibold mb-2">Profile</h3>
+                    <a href="/about-me" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
+                        <h3 className="text-xl font-semibold mb-2">About Me</h3>
                         <p className="text-gray-600">View my profile</p>
                     </a>
                     <a href="/cv" className="border border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-colors">
