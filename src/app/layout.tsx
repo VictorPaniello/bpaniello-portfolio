@@ -16,11 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
                 attribute="class"
                 defaultTheme="system"
                 enableSystem
-                disableTransitionOnChange
                 >
-                <div className="min-h-screen bg-white">
                     {children}
-                </div>
             </ThemeProvider>
         </body>
     </html>

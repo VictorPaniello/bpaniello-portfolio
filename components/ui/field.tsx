@@ -12,8 +12,8 @@ function FieldSet({ className, ...props }: React.ComponentProps<"fieldset">) {
     <fieldset
       data-slot="field-set"
       className={cn(
-        "tw-:flex tw-:flex-col tw-:gap-6",
-        "tw-:has-[>[data-slot=checkbox-group]]:gap-3 tw-:has-[>[data-slot=radio-group]]:gap-3",
+        "flex flex-col gap-6",
+        "has-[>[data-slot=checkbox-group]]:gap-3 has-[>[data-slot=radio-group]]:gap-3",
         className
       )}
       {...props}
@@ -31,9 +31,9 @@ function FieldLegend({
       data-slot="field-legend"
       data-variant={variant}
       className={cn(
-        "tw-:mb-3 tw-:font-medium",
-        "tw-:data-[variant=legend]:text-base",
-        "tw-:data-[variant=label]:text-sm",
+        "mb-3 font-medium",
+        "data-[variant=legend]:text-base",
+        "data-[variant=label]:text-sm",
         className
       )}
       {...props}
@@ -46,7 +46,7 @@ function FieldGroup({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="field-group"
       className={cn(
-        "tw-:group/field-group tw-:@container/field-group tw-:flex tw-:w-full tw-:flex-col tw-:gap-7 tw-:data-[slot=checkbox-group]:gap-3 tw-:[&>[data-slot=field-group]]:gap-4",
+        "group/field-group @container/field-group flex w-full flex-col gap-7 data-[slot=checkbox-group]:gap-3 [&>[data-slot=field-group]]:gap-4",
         className
       )}
       {...props}
@@ -55,7 +55,7 @@ function FieldGroup({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const fieldVariants = cva(
-  "tw-:group/field tw-:data-[invalid=true]:text-destructive tw-:flex tw-:w-full tw-:gap-3",
+  "group/field data-[invalid=true]:text-destructive flex w-full gap-3",
   {
     variants: {
       orientation: {
@@ -99,7 +99,7 @@ function FieldContent({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="field-content"
       className={cn(
-        "tw-:group/field-content tw-:flex tw-:flex-1 tw-:flex-col tw-:gap-1.5 tw-:leading-snug",
+        "group/field-content flex flex-1 flex-col gap-1.5 leading-snug",
         className
       )}
       {...props}
@@ -115,9 +115,9 @@ function FieldLabel({
     <Label
       data-slot="field-label"
       className={cn(
-        "tw-:group/field-label tw-:peer/field-label tw-:flex tw-:w-fit tw-:gap-2 tw-:leading-snug tw-:group-data-[disabled=true]/field:opacity-50",
-        "tw-:has-[>[data-slot=field]]:w-full tw-:has-[>[data-slot=field]]:flex-col tw-:has-[>[data-slot=field]]:rounded-md tw-:has-[>[data-slot=field]]:border tw-:[&>[data-slot=field]]:p-4",
-        "tw-:has-data-[state=checked]:bg-primary/5 tw-:has-data-[state=checked]:border-primary tw-:dark:has-data-[state=checked]:bg-primary/10",
+        "group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50",
+        "has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-md has-[>[data-slot=field]]:border [&>[data-slot=field]]:p-4",
+        "has-data-[state=checked]:bg-primary/5 has-data-[state=checked]:border-primary dark:has-data-[state=checked]:bg-primary/10",
         className
       )}
       {...props}
@@ -130,7 +130,7 @@ function FieldTitle({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="field-label"
       className={cn(
-        "tw-:flex tw-:w-fit tw-:items-center tw-:gap-2 tw-:text-sm tw-:font-medium tw-:leading-snug tw-:group-data-[disabled=true]/field:opacity-50",
+        "flex w-fit items-center gap-2 text-sm font-medium leading-snug group-data-[disabled=true]/field:opacity-50",
         className
       )}
       {...props}
@@ -143,9 +143,9 @@ function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
     <p
       data-slot="field-description"
       className={cn(
-        "tw-:text-muted-foreground tw-:text-sm tw-:font-normal tw-:leading-normal tw-:group-has-[[data-orientation=horizontal]]/field:text-balance",
-        "tw-:nth-last-2:-mt-1 tw-:last:mt-0 tw-:[[data-variant=legend]+&]:-mt-1.5",
-        "tw-:[&>a:hover]:text-primary tw-:[&>a]:underline tw-:[&>a]:underline-offset-4",
+        "text-muted-foreground text-sm font-normal leading-normal group-has-[[data-orientation=horizontal]]/field:text-balance",
+        "nth-last-2:-mt-1 last:mt-0 [[data-variant=legend]+&]:-mt-1.5",
+        "[&>a:hover]:text-primary [&>a]:underline [&>a]:underline-offset-4",
         className
       )}
       {...props}
@@ -165,15 +165,15 @@ function FieldSeparator({
       data-slot="field-separator"
       data-content={!!children}
       className={cn(
-        "tw-:relative tw-:-my-2 tw-:h-5 tw-:text-sm tw-:group-data-[variant=outline]/field-group:-mb-2",
+        "relative -my-2 h-5 text-sm group-data-[variant=outline]/field-group:-mb-2",
         className
       )}
       {...props}
     >
-      <Separator className="tw-:absolute tw-:inset-0 tw-:top-1/2" />
+      <Separator className="absolute inset-0 top-1/2" />
       {children && (
         <span
-          className="tw-:bg-background tw-:text-muted-foreground tw-:relative tw-:mx-auto tw-:block tw-:w-fit tw-:px-2"
+          className="bg-background text-muted-foreground relative mx-auto block w-fit px-2"
           data-slot="field-separator-content"
         >
           {children}
@@ -205,7 +205,7 @@ function FieldError({
     }
 
     return (
-      <ul className="tw-:ml-4 tw-:flex tw-:list-disc tw-:flex-col tw-:gap-1">
+      <ul className="ml-4 flex list-disc flex-col gap-1">
         {errors.map(
           (error, index) =>
             error?.message && <li key={index}>{error.message}</li>
@@ -222,7 +222,7 @@ function FieldError({
     <div
       role="alert"
       data-slot="field-error"
-      className={cn("tw-:text-destructive tw-:text-sm tw-:font-normal", className)}
+      className={cn("text-destructive text-sm font-normal", className)}
       {...props}
     >
       {content}

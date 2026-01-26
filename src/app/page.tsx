@@ -10,10 +10,22 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function Home() {
+    const items = [
+        {
+            label: "About",
+            bgColor: "#fff",
+            textColor: "#000",
+            links: [
+                { label: "Company", ariaLabel: "About Company"},
+                { label: "Career", ariaLabel: "About Career"}
+            ]
+        }
+    ];
+    
     return (
         <div className="relative min-h-screen">
           {/* Navigation Header */}
-            <header className="border-b border-gray-200/50 bg-white/80 backdrop-blur-sm">
+            <header className="border-b border-gray-200/50 backdrop-blur-sm">
                 <nav className="max-w-6xl mx-auto px-4 py-4">
                     <div className="flex justify-between items-center">
                         <h1 className="text-xl font-semibold">Blanca Paniello</h1>
@@ -21,6 +33,16 @@ export default function Home() {
                     </div>
                 </nav>
             </header>
+
+        <CardNav
+            logoAlt="Company Logo"
+            items={items}
+            baseColor="#fff"
+            menuColor="#000"
+            buttonBgColor="#111"
+            buttonTextColor="#fff"
+            ease="power3.out"
+            />
         
           {/* Main Content */}
             <main className="max-w-4xl mx-auto px-4 py-12">

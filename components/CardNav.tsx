@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
@@ -5,7 +7,7 @@ import { GoArrowUpRight } from 'react-icons/go';
 
 type CardNavLink = {
   label: string;
-  href: string;
+  href?: string;
   ariaLabel: string;
 };
 
@@ -17,7 +19,7 @@ export type CardNavItem = {
 };
 
 export interface CardNavProps {
-  logo: string;
+  logo?: string;
   logoAlt?: string;
   items: CardNavItem[];
   className?: string;
@@ -164,7 +166,7 @@ const CardNav: React.FC<CardNavProps> = ({
         className={`card-nav ${isExpanded ? 'open' : ''} block h-[60px] p-0 rounded-xl shadow-md relative overflow-hidden will-change-[height]`}
         style={{ backgroundColor: baseColor }}
       >
-        <div className="tw-:card-nav-top tw-:absolute tw-:inset-x-0 tw-:top-0 tw-:h-[60px] tw-:flex tw-:items-center tw-:justify-between tw-:p-2 tw-:pl-[1.1rem] tw-:z-[2]">
+        <div className="card-nav-top absolute inset-x-0 top-0 h-[60px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
           <div
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''} group h-full flex flex-col items-center justify-center cursor-pointer gap-[6px] order-2 md:order-none`}
             onClick={toggleMenu}
@@ -185,13 +187,13 @@ const CardNav: React.FC<CardNavProps> = ({
             />
           </div>
 
-          <div className="tw-:logo-container tw-:flex tw-:items-center tw-:md:absolute tw-:md:left-1/2 tw-:md:top-1/2 tw-:md:-translate-x-1/2 tw-:md:-translate-y-1/2 tw-:order-1 tw-:md:order-none">
-            <img src={logo} alt={logoAlt} className="tw-:logo tw-:h-[28px]" />
+          <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
+            <img src={logo} alt={logoAlt} className="logo h-[28px]" />
           </div>
 
           <button
             type="button"
-            className="tw-:card-nav-cta-button tw-:hidden tw-:md:inline-flex tw-:border-0 tw-:rounded-[calc(0.75rem-0.2rem)] tw-:px-4 tw-:items-center tw-:h-full tw-:font-medium tw-:cursor-pointer tw-:transition-colors tw-:duration-300"
+            className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
             Get Started
@@ -207,22 +209,22 @@ const CardNav: React.FC<CardNavProps> = ({
           {(items || []).slice(0, 3).map((item, idx) => (
             <div
               key={`${item.label}-${idx}`}
-              className="tw-:nav-card tw-:select-none tw-:relative tw-:flex tw-:flex-col tw-:gap-2 tw-:p-[12px_16px] tw-:rounded-[calc(0.75rem-0.2rem)] tw-:min-w-0 tw-:flex-[1_1_auto] tw-:h-auto tw-:min-h-[60px] tw-:md:h-full tw-:md:min-h-0 tw-:md:flex-[1_1_0%]"
+              className="nav-card select-none relative flex flex-col gap-2 p-[12px_16px] rounded-[calc(0.75rem-0.2rem)] min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]"
               ref={setCardRef(idx)}
               style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
-              <div className="tw-:nav-card-label tw-:font-normal tw-:tracking-[-0.5px] tw-:text-[18px] tw-:md:text-[22px]">
+              <div className="nav-card-label font-normal tracking-[-0.5px] text-[18px] md:text-[22px]">
                 {item.label}
               </div>
-              <div className="tw-:nav-card-links tw-:mt-auto tw-:flex tw-:flex-col tw-:gap-[2px]">
+              <div className="nav-card-links mt-auto flex flex-col gap-[2px]">
                 {item.links?.map((lnk, i) => (
                   <a
                     key={`${lnk.label}-${i}`}
-                    className="tw-:nav-card-link tw-:inline-flex tw-:items-center tw-:gap-[6px] tw-:no-underline tw-:cursor-pointer tw-:transition-opacity tw-:duration-300 tw-:hover:opacity-75 tw-:text-[15px] tw-:md:text-[16px]"
+                    className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
                     href={lnk.href}
                     aria-label={lnk.ariaLabel}
                   >
-                    <GoArrowUpRight className="tw-:nav-card-link-icon tw-:shrink-0" aria-hidden="true" />
+                    <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
                     {lnk.label}
                   </a>
                 ))}
