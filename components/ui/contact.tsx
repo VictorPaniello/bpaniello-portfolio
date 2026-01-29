@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ContactForm } from '@/components/ui/contact-form';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -19,8 +20,8 @@ export function Contact() {
     return(
         <footer id="contact" className="bg-gray-100 dark:bg-gray-900 rounded-lg p-10 mt-20 w-full">
             <div className="max-w-7xl mx-auto px-2">
-                <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-                <p className="text-gray-700 dark:text-gray-300">Email: your.email@example.com</p>
+                <h1 className="text-5xl font-bold mb-4">Contact</h1>
+                <ContactForm />
             </div>
         </footer>
     );

@@ -61,10 +61,39 @@ export function ContactForm() {
         },
     })
 
-    /*function onSubmit(data: z.infer<typeof formSchema>) {
-        toast('You submitted the following values:', {
-            name: ()
-        })
+    async function onSubmit(data: z.infer<typeof formSchema>) {
+        try {
+            const FormData = new FormData();
+            FormData.append('name', data.name);
+            FormData.append('surname', data.surname);
+            FormData.append('email', data.email);
+            FormData.append('subject', data.subject);
+            FormData.append('message', data.message);
+
+            const response = await fetch('/api', {
+                method: 'POST',
+                body: FormData,
+            })
+
+            if (!response.ok) {
+                throw new Error('Failed to send message. Please try again later.');
+            }
+
+            toast.success('Message sent successfully!');
+            form.reset();
+        } catch (error) {
+            toast.error('Failed to send message. Please try again later.');
+        }
     }
-    return();*/
+    return(
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+            <Card>
+                <CardHeader>
+                    <CardTitle>
+                        Contact Me
+                    </CardTitle>
+                </CardHeader>
+            </Card>
+        </form>
+    );
 }
