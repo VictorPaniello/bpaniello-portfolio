@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
-import { ThemeProvider } from "@/components/theme-provider";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { ScrollToTopButton } from "@/components/ui/scroll-to-top";
 import { FloatingNavbar } from "@/components/ui/floating-navbar";
 import { Contact } from '@/components/ui/contact';
