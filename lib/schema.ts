@@ -17,7 +17,7 @@ interface Publication {
     }
 }
 
-interface Project {
+interface Article {
     name: string;
     description: string;
     type: "research" | "clinical-trial" | "collaboration" | "other";
@@ -83,4 +83,4 @@ interface Experience {
     researchFocus?: string[];
 }
 
-export type { Publication, Project, AboutMe, Education, Certification, Experience };
+export type { Publication, Article, AboutMe, Education, Certification, Experience };

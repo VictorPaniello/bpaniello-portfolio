@@ -1,5 +1,5 @@
-import type { AboutMe } from "../lib/schema";
-import type { Education } from "../lib/schema";
+import type { AboutMe } from "../../lib/schema";
+import type { Education } from "../../lib/schema";
 
 export const aboutMe = {
     name: "Blanca Paniello",

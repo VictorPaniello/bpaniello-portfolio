@@ -1,7 +1,7 @@
-export const projects = [
+export const articles = [
     {
         name: "Research on X",
-        description: "Brief description of the project",
+        description: "Brief description of the article",
         type: "research",
         status: "completed",
         links: {
@@ -13,7 +13,7 @@ export const projects = [
     },
     {
         name: "Clinical Trial Y",
-        description: "Another project description",
+        description: "Another article description",
         type: "clinical-trial",
         status: "active",
         links: {

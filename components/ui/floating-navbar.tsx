@@ -1,4 +1,3 @@
-// filepath: c:\Users\bread\bpaniello-portfolio\src\components\floating-navbar.tsx
 "use client";
 
 import {
@@ -84,7 +83,7 @@ export function FloatingNavbar() {
 								'--fa-animation-delay': '2s',
 								'--fa-animation-iteration-count': '3',
 							} as any} />
-								Contact
+								&nbsp;Contact
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 					</NavigationMenuList>

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { ScrollToTopButton } from "@/components/ui/scroll-to-top";
 import { FloatingNavbar } from "@/components/ui/floating-navbar";
+import { Contact } from '@/components/ui/contact';
 
 export const metadata: Metadata = {
     title: "Blanca Paniello's Portfolio",
@@ -26,13 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
                     <FloatingNavbar />
                     {children}
             </ThemeProvider>
-            {/* Contact Section */}
-            <footer id="contact" className="bg-gray-100 dark:bg-gray-900 rounded-lg p-10 mt-20 w-full">
-                <div className="max-w-7xl mx-auto px-2">
-                    <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-                    <p className="text-gray-700 dark:text-gray-300">Email: your.email@example.com</p>
-                </div>
-            </footer>
+            <Contact />
             {/* Scroll to Top Button */}
             <ScrollToTopButton />
         </body>

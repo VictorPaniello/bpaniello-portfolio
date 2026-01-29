@@ -1,6 +1,6 @@
 import React from 'react';
 import publicationsData from '../../content/publications.json'
-import { Publication } from '../../lib/schema';
+import { Publication } from '../../../lib/schema';
 
 export default function PublicationsPage() {
 
