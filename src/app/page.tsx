@@ -1,23 +1,7 @@
 "use client"
 
-import * as React from 'react';
-import { useState, useEffect } from 'react'
-import ReactDOM from 'react-dom'
-import { Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import Link from 'next/link'
-
 import ArticlesPage from './articles/page';
 import AboutMePage from './about-me/page';
-
-import { Button } from '@/components/ui/button'
-import { NavigationMenuItem, NavigationMenu, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from '@/components/ui/dropdown-menu'
-import { ModeToggle } from "@/components/ui/mode-toggle";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faArrowUp } from '@fortawesome/free-solid-svg-icons'
-
 
 export default function Home() {
     return (
