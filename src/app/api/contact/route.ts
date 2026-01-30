@@ -39,9 +39,9 @@ export async function POST(request: NextRequest) {
         console.log('Sending email via Resend...');
 
         const { data, error } = await resend.emails.send({
-            from: 'Contact Form <onboarding@resend.dev>',
+            from: 'Contact Form <contact@pblanca.com>',
             to: ['paniblanca@gmail.com'],
-            subject: subject || 'Contact Form Submission',
+            subject: subject,
             react: EmailTemplate({ 
                 name,
                 surname,
