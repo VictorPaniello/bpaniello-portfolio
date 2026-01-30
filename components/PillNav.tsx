@@ -249,7 +249,7 @@ const PillNav: React.FC<PillNavProps> = ({
   } as React.CSSProperties;
 
   return (
-    <div className="tw-:absolute tw-:top-[1em] tw-:z-[1000] tw-:w-full tw-:left-0 tw-:md:w-auto tw-:md:left-auto">
+    <div className="absolute top-[1em] z-[1000] w-full left-0 md:w-auto md:left-auto">
       <nav
         className={`w-full md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 ${className}`}
         aria-label="Primary"
@@ -264,14 +264,14 @@ const PillNav: React.FC<PillNavProps> = ({
             ref={el => {
               logoRef.current = el;
             }}
-            className="tw-:rounded-full tw-:p-2 tw-:inline-flex tw-:items-center tw-:justify-center tw-:overflow-hidden"
+            className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
             style={{
               width: 'var(--nav-h)',
               height: 'var(--nav-h)',
               background: 'var(--base, #000)'
             }}
           >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} className="tw-:w-full tw-:h-full tw-:object-cover tw-:block" />
+            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
           </Link>
         ) : (
           <a
@@ -281,20 +281,20 @@ const PillNav: React.FC<PillNavProps> = ({
             ref={el => {
               logoRef.current = el;
             }}
-            className="tw-:rounded-full tw-:p-2 tw-:inline-flex tw-:items-center tw-:justify-center tw-:overflow-hidden"
+            className="rounded-full p-2 inline-flex items-center justify-center overflow-hidden"
             style={{
               width: 'var(--nav-h)',
               height: 'var(--nav-h)',
               background: 'var(--base, #000)'
             }}
           >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} className="tw-:w-full tw-:h-full tw-:object-cover tw-:block" />
+            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
           </a>
         )}
 
         <div
           ref={navItemsRef}
-          className="tw-:relative tw-:items-center tw-:rounded-full tw-:hidden tw-:md:flex tw-:ml-2"
+          className="relative items-center rounded-full hidden md:flex ml-2"
           style={{
             height: 'var(--nav-h)',
             background: 'var(--base, #000)'
@@ -302,7 +302,7 @@ const PillNav: React.FC<PillNavProps> = ({
         >
           <ul
             role="menubar"
-            className="tw-:list-none tw-:flex tw-:items-stretch tw-:m-0 tw-:p-[3px] tw-:h-full"
+            className="list-none flex items-stretch m-0 p-[3px] h-full"
             style={{ gap: 'var(--pill-gap)' }}
           >
             {items.map((item, i) => {
@@ -318,7 +318,7 @@ const PillNav: React.FC<PillNavProps> = ({
               const PillContent = (
                 <>
                   <span
-                    className="tw-:hover-circle tw-:absolute tw-:left-1/2 tw-:bottom-0 tw-:rounded-full tw-:z-[1] tw-:block tw-:pointer-events-none"
+                    className="hover-circle absolute left-1/2 bottom-0 rounded-full z-[1] block pointer-events-none"
                     style={{
                       background: 'var(--base, #000)',
                       willChange: 'transform'
@@ -328,15 +328,15 @@ const PillNav: React.FC<PillNavProps> = ({
                       circleRefs.current[i] = el;
                     }}
                   />
-                  <span className="tw-:label-stack tw-:relative tw-:inline-block tw-:leading-[1] tw-:z-[2]">
+                  <span className="label-stack relative inline-block leading-[1] z-[2]">
                     <span
-                      className="tw-:pill-label tw-:relative tw-:z-[2] tw-:inline-block tw-:leading-[1]"
+                      className="pill-label relative z-[2] inline-block leading-[1]"
                       style={{ willChange: 'transform' }}
                     >
                       {item.label}
                     </span>
                     <span
-                      className="tw-:pill-label-hover tw-:absolute tw-:left-0 tw-:top-0 tw-:z-[3] tw-:inline-block"
+                      className="pill-label-hover absolute left-0 top-0 z-[3] inline-block"
                       style={{
                         color: 'var(--hover-text, #fff)',
                         willChange: 'transform, opacity'
@@ -348,7 +348,7 @@ const PillNav: React.FC<PillNavProps> = ({
                   </span>
                   {isActive && (
                     <span
-                      className="tw-:absolute tw-:left-1/2 tw-:-bottom-[6px] tw-:-translate-x-1/2 tw-:w-3 tw-:h-3 tw-:rounded-full tw-:z-[4]"
+                      className="absolute left-1/2 -bottom-[6px] -translate-x-1/2 w-3 h-3 rounded-full z-[4]"
                       style={{ background: 'var(--base, #000)' }}
                       aria-hidden="true"
                     />
@@ -360,7 +360,7 @@ const PillNav: React.FC<PillNavProps> = ({
                 'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
 
               return (
-                <li key={item.href} role="none" className="tw-:flex tw-:h-full">
+                <li key={item.href} role="none" className="flex h-full">
                   {isRouterLink(item.href) ? (
                     <Link
                       role="menuitem"
@@ -397,7 +397,7 @@ const PillNav: React.FC<PillNavProps> = ({
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
           aria-expanded={isMobileMenuOpen}
-          className="tw-:md:hidden tw-:rounded-full tw-:border-0 tw-:flex tw-:flex-col tw-:items-center tw-:justify-center tw-:gap-1 tw-:cursor-pointer tw-:p-0 tw-:relative"
+          className="md:hidden rounded-full border-0 flex flex-col items-center justify-center gap-1 cursor-pointer p-0 relative"
           style={{
             width: 'var(--nav-h)',
             height: 'var(--nav-h)',
@@ -405,11 +405,11 @@ const PillNav: React.FC<PillNavProps> = ({
           }}
         >
           <span
-            className="tw-:hamburger-line tw-:w-4 tw-:h-0.5 tw-:rounded tw-:origin-center tw-:transition-all tw-:duration-[10ms] tw-:ease-[cubic-bezier(0.25,0.1,0.25,1)]"
+            className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
             style={{ background: 'var(--pill-bg, #fff)' }}
           />
           <span
-            className="tw-:hamburger-line tw-:w-4 tw-:h-0.5 tw-:rounded tw-:origin-center tw-:transition-all tw-:duration-[10ms] tw-:ease-[cubic-bezier(0.25,0.1,0.25,1)]"
+            className="hamburger-line w-4 h-0.5 rounded origin-center transition-all duration-[10ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
             style={{ background: 'var(--pill-bg, #fff)' }}
           />
         </button>
@@ -417,13 +417,13 @@ const PillNav: React.FC<PillNavProps> = ({
 
       <div
         ref={mobileMenuRef}
-        className="tw-:md:hidden tw-:absolute tw-:top-[3em] tw-:left-4 tw-:right-4 tw-:rounded-[27px] tw-:shadow-[0_8px_32px_rgba(0,0,0,0.12)] tw-:z-[998] tw-:origin-top"
+        className="md:hidden absolute top-[3em] left-4 right-4 rounded-[27px] shadow-[0_8px_32px_rgba(0,0,0,0.12)] z-[998] origin-top"
         style={{
           ...cssVars,
           background: 'var(--base, #f0f0f0)'
         }}
       >
-        <ul className="tw-:list-none tw-:m-0 tw-:p-[3px] tw-:flex tw-:flex-col tw-:gap-[3px]">
+        <ul className="list-none m-0 p-[3px] flex flex-col gap-[3px]">
           {items.map(item => {
             const defaultStyle: React.CSSProperties = {
               background: 'var(--pill-bg, #fff)',
