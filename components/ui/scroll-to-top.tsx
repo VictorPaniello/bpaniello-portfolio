@@ -11,8 +11,7 @@ export function ScrollToTopButton() {
     return (
         <button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 hover:opacity-80 text-white dark:text-black p-3 rounded-full shadow-lg transition-all duration-300 z-50 cursor-pointer"
-            style={{ backgroundColor: 'var(--foreground)' }}
+            className="fixed bottom-8 right-8 hover:opacity-80 bg-primary text-background p-3 rounded-full shadow-lg transition-all duration-300 z-50 cursor-pointer"
             aria-label="Scroll to top"
         >
             <FontAwesomeIcon icon={faArrowUp} size="lg" />

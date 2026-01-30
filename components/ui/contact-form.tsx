@@ -88,7 +88,7 @@ export function ContactForm() {
     return(
         <Card className="w-full max-w-2xl shadow-lg">
             <CardHeader className="space-y-1">
-                <CardTitle className="text-3xl font-bold">Get in Touch</CardTitle>
+                <CardTitle className="text-3xl text-foreground font-bold">Get in Touch</CardTitle>
                 <CardDescription className="text-base">
                     Fill out the form below and I'll get back to you as soon as possible.
                 </CardDescription>
@@ -97,7 +97,7 @@ export function ContactForm() {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <Field>
-                            <FieldLabel className="text-sm font-semibold">Name *</FieldLabel>
+                            <FieldLabel className="text-sm font-semibold text-foreground">Name *</FieldLabel>
                             <FieldGroup>
                                 <Input 
                                     {...form.register('name')} 
@@ -111,7 +111,7 @@ export function ContactForm() {
                         </Field>
                         
                         <Field>
-                            <FieldLabel className="text-sm font-semibold">Surname *</FieldLabel>
+                            <FieldLabel className="text-sm font-semibold text-foreground">Surname *</FieldLabel>
                             <FieldGroup>
                                 <Input 
                                     {...form.register('surname')} 
@@ -126,7 +126,7 @@ export function ContactForm() {
                     </div>
 
                     <Field>
-                        <FieldLabel className="text-sm font-semibold">Email *</FieldLabel>
+                        <FieldLabel className="text-sm font-semibold text-foreground">Email *</FieldLabel>
                         <FieldGroup>
                             <Input 
                                 {...form.register('email')} 
@@ -141,7 +141,7 @@ export function ContactForm() {
                     </Field>
 
                     <Field>
-                        <FieldLabel className="text-sm font-semibold">Subject *</FieldLabel>
+                        <FieldLabel className="text-sm font-semibold text-foreground">Subject *</FieldLabel>
                         <FieldGroup>
                             <Input 
                                 {...form.register('subject')} 
@@ -155,7 +155,7 @@ export function ContactForm() {
                     </Field>
 
                     <Field>
-                        <FieldLabel className="text-sm font-semibold">Message *</FieldLabel>
+                        <FieldLabel className="text-sm font-semibold text-foreground">Message *</FieldLabel>
                         <FieldGroup>
                             <textarea 
                                 {...form.register('message')} 
@@ -173,14 +173,14 @@ export function ContactForm() {
                             type="button" 
                             variant="outline" 
                             onClick={() => form.reset()}
-                            className="w-full md:w-auto hover:cursor-pointer"
+                            className="w-full md:w-auto hover:cursor-pointer text-foreground"
                         >
                             Reset
                         </Button>
                         <Button 
                             type="submit" 
                             disabled={form.formState.isSubmitting}
-                            className="w-full md:w-auto min-w-[120px] hover:cursor-pointer"
+                            className="w-full md:w-auto min-w-[120px] hover:cursor-pointer text-background bg-foreground"
                         >
                             {form.formState.isSubmitting ? (
                                 <>
