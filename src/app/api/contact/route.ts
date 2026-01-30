@@ -2,12 +2,13 @@ import { EmailTemplate } from '@/components/email-template';
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
     console.log('API route called');
     
     try {
+
+        const resend = new Resend(process.env.RESEND_API_KEY);
+
         // Verifica que la API key esté configurada
         if (!process.env.RESEND_API_KEY) {
             console.error('RESEND_API_KEY is not set');
