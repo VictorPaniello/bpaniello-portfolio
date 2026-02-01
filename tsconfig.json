@@ -17,6 +17,7 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
+    "ignoreDeprecations": "6.0",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -35,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/types/**/*.d.ts"
-  ],
+, "next.config.js"  ],
   "exclude": [
     "node_modules"
   ]

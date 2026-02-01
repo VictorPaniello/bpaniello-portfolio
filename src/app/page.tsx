@@ -1,23 +1,10 @@
 "use client"
 
-import * as React from 'react';
-import { useState, useEffect } from 'react'
-import ReactDOM from 'react-dom'
-import { Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import Link from 'next/link'
-
 import ArticlesPage from './articles/page';
 import AboutMePage from './about-me/page';
-
-import { Button } from '@/components/ui/button'
-import { NavigationMenuItem, NavigationMenu, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from '@/components/ui/dropdown-menu'
-import { ModeToggle } from "@/components/ui/mode-toggle";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faArrowUp } from '@fortawesome/free-solid-svg-icons'
-
+import SeminarsTeachingPage from './seminars-teaching/page';
+import MediaPage from './media/page';
+import VolunteeringPage from './volunteering/page';
 
 export default function Home() {
     return (
@@ -47,6 +34,15 @@ export default function Home() {
                 {/* Articles Section */}
                 <section id ="articles" className="flex items-center pt-32 pb-100">
                     <ArticlesPage />
+                </section>
+                <section id ="seminars-teaching" className="flex items-center pt-32 pb-100 justify-end">
+                    <SeminarsTeachingPage />
+                </section>
+                <section id ="media" className="flex items-center pt-32 pb-100">
+                    <MediaPage />
+                </section>
+                <section id ="volunteering" className="flex items-center pt-32 pb-100 justify-end">
+                    <VolunteeringPage />
                 </section>
             </main>
         </div>
