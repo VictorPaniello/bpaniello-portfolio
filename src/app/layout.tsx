@@ -6,7 +6,7 @@ import { FloatingNavbar } from "@/components/ui/floating-navbar";
 import { Contact } from '@/components/ui/contact';
 
 export const metadata: Metadata = {
-    title: "Blanca Paniello's Portfolio",
+    title: "Blanca Paniello Castillo",
     description: "Academic portfolio showcasing research and publications in the field of biomedicine",
 };
 
