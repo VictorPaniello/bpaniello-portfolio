@@ -52,10 +52,10 @@ export function FloatingNavbar() {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href="#seminars-teaching"
+								href="#experience"
 								className={navigationMenuTriggerStyle()}
 							>
-								Seminars / Teaching
+								Experience
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
