@@ -1,7 +1,7 @@
 export default function VolunteeringPage() {
     return (
         <div>
-            {/* Your volunteering content */}
+            <h2 className="text-5xl font-bold mb-4">Volunteering</h2>
         </div>
     );
 }

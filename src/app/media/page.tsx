@@ -1,7 +1,7 @@
 export default function MediaPage() {
     return (
         <div>
-            {/* Your media content */}
+            <h2 className="text-5xl font-bold mb-4">Media</h2>
         </div>
     );
 }
