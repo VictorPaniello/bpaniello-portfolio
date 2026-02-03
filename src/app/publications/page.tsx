@@ -17,11 +17,11 @@ export default function PublicationsPage() {
     const sortedYears = Object.keys(groupedPublications).map(Number).sort((a, b) => b - a);
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-16 px-4">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
             <div className="max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                     Publications
-                </h2>
+                </h1>
                 <p className="text-lg text-gray-600 mb-12">
                     Research papers, conference proceedings, and academic contributions.
                 </p>

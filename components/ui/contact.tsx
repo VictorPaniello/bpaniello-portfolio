@@ -20,7 +20,7 @@ export function Contact() {
     return(
         <footer id="contact" className="bg-foreground p-24 w-full">
             <div className="max-w-7xl mx-auto px-2">
-                <h2 className="text-5xl font-bold mb-4 text-background">Contact</h2>
+                <h1 className="text-5xl font-bold mb-4 text-background">Contact</h1>
                 <ContactForm />
             </div>
         </footer>

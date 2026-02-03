@@ -180,7 +180,7 @@ export function ContactForm() {
                         <Button 
                             type="submit" 
                             disabled={form.formState.isSubmitting}
-                            className="w-full md:w-auto min-w-30 hover:cursor-pointer text-background bg-foreground"
+                            className="w-full md:w-auto min-w-[120px] hover:cursor-pointer text-background bg-foreground"
                         >
                             {form.formState.isSubmitting ? (
                                 <>
