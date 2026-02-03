@@ -1,10 +1,6 @@
 "use client"
 
-import ArticlesPage from './articles/page';
 import AboutMePage from './about-me/page';
-import MediaPage from './media/page';
-import VolunteeringPage from './volunteering/page';
-import ExperiencePage from './experience/page';
 
 export default function Home() {
     return (
@@ -30,16 +26,6 @@ export default function Home() {
                 {/* About Me Section */}
                 <section id="about-me" className="flex items-center pt-32 pb-100 justify-end">
                     <AboutMePage />
-                </section>
-                {/* Articles Section */}
-                <section id ="articles" className="flex items-center pt-32 pb-100">
-                    <ArticlesPage />
-                </section>
-                <section id ="media" className="flex items-center pt-32 pb-100">
-                    <MediaPage />
-                </section>
-                <section id ="volunteering" className="flex items-center pt-32 pb-100 justify-end">
-                    <VolunteeringPage />
                 </section>
             </main>
         </div>
