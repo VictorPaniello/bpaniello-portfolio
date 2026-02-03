@@ -2,7 +2,7 @@ import type { AboutMe } from "../../lib/schema";
 import type { Education } from "../../lib/schema";
 
 export const aboutMe = {
-    name: "Blanca Paniello",
+    name: "Blanca Paniello Castillo",
     title: "Dr.",
     email: "blancapaniello@blancapaniello.com",
     location: "Barcelona",

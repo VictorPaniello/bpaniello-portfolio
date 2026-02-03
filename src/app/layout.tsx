@@ -14,6 +14,9 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
 
     return (
     <html lang="en" suppressHydrationWarning>
+        <head>
+              <link rel="icon" type="image/x-icon" href="/public/favicon.png" />
+        </head>
         <body>
             <FloatingNavbar />
                 {children}
