@@ -36,23 +36,7 @@ export function FloatingNavbar() {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href="#about-me"
-								className={navigationMenuTriggerStyle()}
-							>
-								About Me
-							</NavigationMenuLink>
-						</NavigationMenuItem>
-						<NavigationMenuItem>
-							<NavigationMenuLink
-								href="#articles"
-								className={navigationMenuTriggerStyle()}
-							>
-								Articles
-							</NavigationMenuLink>
-						</NavigationMenuItem>
-						<NavigationMenuItem>
-							<NavigationMenuLink
-								href="#experience"
+								href="/experience"
 								className={navigationMenuTriggerStyle()}
 							>
 								Experience
@@ -60,7 +44,15 @@ export function FloatingNavbar() {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href="#media"
+								href="/articles"
+								className={navigationMenuTriggerStyle()}
+							>
+								Articles
+							</NavigationMenuLink>
+						</NavigationMenuItem>
+						<NavigationMenuItem>
+							<NavigationMenuLink
+								href="/media"
 								className={navigationMenuTriggerStyle()}
 							>
 								Media
@@ -68,7 +60,7 @@ export function FloatingNavbar() {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href="#volunteering"
+								href="/volunteering"
 								className={navigationMenuTriggerStyle()}
 							>
 								Volunteering

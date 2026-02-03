@@ -1,7 +1,12 @@
 export default function ExperiencePage() {
     return (
-        <div>
-            <h2 className="text-5xl font-bold mb-4">Experience</h2>
+        <div className="relative min-h-screen">
+            {/* Main Content */}
+            <main className="max-w-7xl mx-auto px-2">
+                <div>
+                    <h1>Experience</h1>
+                </div>
+            </main>
         </div>
     );
 }
