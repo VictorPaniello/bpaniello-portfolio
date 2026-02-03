@@ -6,7 +6,7 @@ export default function ExperiencePage() {
             {/* Main Content */}
             <main id="home" className="max-w-4xl mx-auto px-2">
                 {/* Hero Section */}
-                <section className="flex items-center pb-100">
+                <section className="flex items-center">
                     <Experience1 />
                 </section>
             </main>

@@ -1,3 +1,5 @@
+"use client"
+
 import { Download } from "lucide-react";
 import React from "react";
 
@@ -12,62 +14,89 @@ interface Experience1Props {
 const Experience1 = ({ className }: Experience1Props) => {
 	const experience = [
 		{
-			period: "Sep 2025 - Now",
-			title: "Sr. Software Engineer",
+			period: "May 2025 - Sep 2025",
+			title: "Consultant",
 			description:
-				"Leading development of scalable web applications using React, TypeScript, and Node.js. Mentoring junior developers and implementing best practices.",
-			company: "Google",
+				"Provided technical and scientific support to the Urban Resilience to Climate Change project. Contributed to the preparation of a diagnostic report on climate-related challenges and supported the design and selection of a proposed research project.",
+			company: "Exea Impact & ISGlobal",
 		},
 		{
-			period: "Mar 2023 - Aug 2025",
-			title: "Full Stack Developer",
+			period: "Jul 2023 - Sep 2023",
+			title: "Consultant",
 			description:
-				"Built and maintained multiple client websites and e-commerce platforms. Collaborated with design teams to implement pixel-perfect UI/UX designs.",
-			company: "Microsoft",
+				"Coordinated a project assessing the integration of health considerations across 194 Nationally Determined Contributions (NDCs). Contributed to the development of a policymakers’ report and communication strategy.",
+			company: "Global Climate and Health Alliance (GCHA) & Clean Air Fund",
 		},
 		{
-			period: "Jan 2021 - Feb 2023",
-			title: "Frontend Developer",
+			period: "June 2023",
+			title: "Research Assitant",
+			subtitle: "Epidemiology and Public Health Intervention Research (EPHIR)",
 			description:
-				"Developed responsive web applications using modern JavaScript frameworks. Optimized performance and accessibility across multiple projects.",
-			company: "Apple",
+				"Conducted data analysis and reporting for the Stockholm Public Health Agency. The project focused on network analysis of anxiety and depressive symptoms among youth during the COVID-19 pandemic in Sweden.",
+			company: "Karolinska Institutet",
 		},
 		{
-			period: "Jun 2019 - Dec 2020",
-			title: "Junior Developer",
+			period: "Jul 2023 - Sep 2023",
+			title: "Research Assistant",
+			subtitle: "Centre of Natural Hazards and Disaster Science (CNDS)",
 			description:
-				"Assisted in building web applications and learning modern development practices. Contributed to team projects and code reviews.",
-			company: "Netflix",
+				"Finalised the publication of my Master’s thesis and supported research on climate- and risk-perception-related publications, including assistance with ethical approval processes.",
+			company: "Uppsala University",
 		},
 		{
-			period: "Jun 2019 - Dec 2020",
-			title: "Junior Developer",
+			period: "May 2022 - Dec 2022",
+			title: "Student Coordinator",
+			subtitle: "Swedish Institute for Global Health Transformation (SIGHT)",
 			description:
-				"Assisted in building web applications and learning modern development practices. Contributed to team projects and code reviews.",
-			company: "Netflix",
+				"Coordinated student engagement activities and served as a liaison between youth representatives and the SIGHT Secretariat. Member of the SIGHT Secretariat at the Royal Swedish Academy of Sciences.",
+			company: "Royal Swedish Academy of Sciences",
 		},
 		{
-			period: "Jun 2019 - Dec 2020",
-			title: "Junior Developer",
+			period: "May 2021 - Aug 2022",
+			title: "Consultant",
+			subtitle: "Global Climate and Health Alliance (GCHA)",
 			description:
-				"Assisted in building web applications and learning modern development practices. Contributed to team projects and code reviews.",
-			company: "Netflix",
+				"Performed data analysis for the Healthy NDC Scorecard, assessing country progress in integrating health into national climate commitments. Contributed to evidence synthesis and reporting.",
+			company: "Healthy NDC Working Group",
 		},
 		{
-			period: "Jun 2019 - Dec 2020",
-			title: "Junior Developer",
+			period: "Dec 2019 - Jul 2021",
+			title: "Consultant",
+			subtitle: "Addictions Unit, Fundació Clínic per a la Recerca Biomèdica",
 			description:
-				"Assisted in building web applications and learning modern development practices. Contributed to team projects and code reviews.",
-			company: "Netflix",
+				"Worked on national and European public health projects examining the role of drugs in mental health and related socioeconomic determinants. Responsibilities included data collection, statistical analysis, and reporting.",
+			company: "Hospital Clínic, Barcelona",
 		},
 		{
 			period: "May 2019 - Nov 2019",
 			title: "Research Assistant",
+			subtitle: "Tobacco Control Unit",
 			description:
 				"Contributed to the EU Horizon 2020 project TackSHS, investigating the health impacts of second-hand tobacco smoke and e-cigarette emissions. Conducted fieldwork and data collection.",
-			company: "Tobacco Control Unit, Bellvitge Biomedical Research Institute (IDIBELL)",
+			company: "Bellvitge Biomedical Research Institute (IDIBELL)",
+			additional: "Attendance at TackSHS Final Conference, European Parliament (Brussels, October 2019).",
 		},
 	];
+
+    const handleDownloadCV = async () => {
+        try {
+            const response = await fetch('/api/download');
+            if (!response.ok) throw new Error('Download failed');
+            
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Paniello-Castillo-B_CV.pdf';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        } catch (error) {
+            console.error('Error downloading CV:', error);
+            alert('Failed to download CV. Please try again.');
+        }
+    };
 
 	return (
 		<section className={cn("py-32", className)}>
@@ -76,27 +105,30 @@ const Experience1 = ({ className }: Experience1Props) => {
 					<h1 className="text-5xl font-semibold tracking-tighter lg:text-6xl">
 						Work & Research Experience
 					</h1>
-					<Button variant="ghost" size="lg" className="font-semibold">
-						Download CV <Download className="size-4" />
+					<Button variant="ghost" size="lg" className="font-semibold hover:cursor-pointer" onClick={handleDownloadCV}>
+						CV <Download className="size-4" />
 					</Button>
 				</div>
-
 				<ul>
 					{experience.map((exp, index) => (
 						<li
 							key={index}
 							className="flex flex-col justify-between border-b py-10 md:flex-row"
 						>
-							<div className="max-w-lg text-xl font-semibold tracking-tighter lg:w-1/3">
+							<div className="max-w-lg text-xl font-semibold tracking-tighter lg:w-1/4">
 								{exp.period}
 							</div>
-							<div className="lg:w-1/3">
-								<h2 className="mb-4 text-2xl font-semibold tracking-tighter">
+							<div className="lg:w-1/2">
+								<h2 className="mb-1 text-2xl font-semibold tracking-tighter">
 									{exp.title}
 								</h2>
-								<p className="text-foreground/50">{exp.description}</p>
+								<h3 className="mb-4 text-1xl tracking-tighter italic">
+									{exp.subtitle}
+								</h3>
+								<p className="text-foreground/80">{exp.description}</p>
+								<p className="text-foreground/50 italic mt-2">{exp.additional}</p>
 							</div>
-							<div className="text-right lg:w-1/4">{exp.company}</div>
+							<div className="text-right lg:w-1/5">{exp.company}</div>
 						</li>
 					))}
 				</ul>
