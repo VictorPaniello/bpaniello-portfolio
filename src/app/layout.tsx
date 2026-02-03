@@ -6,9 +6,9 @@ import { FloatingNavbar } from "@/components/ui/floating-navbar";
 import { Contact } from '@/components/ui/contact';
 
 export const metadata: Metadata = {
-    title: "Blanca Paniello Castillo | Biomedical Researcher",
-    description: "Dr. Blanca Paniello Castillo - Biomedical researcher specializing in climate change, health impacts, gender studies, and socioeconomic research. View publications and academic portfolio.",
-    keywords: ["Blanca Paniello Castillo", "B. Paniello-Castillo", "Paniello-Castillo B.", "biomedical research", "climate change health", "gender health research", "socioeconomic health"],
+    title: "Blanca Paniello Castillo | Climate & Health Researcher",
+    description: "Dr. Blanca Paniello Castillo - Climate & Health researcher specializing in climate change, health impacts, gender studies, and socioeconomic research. Explore my work, publications, and contributions.",
+    keywords: ["Blanca Paniello", "Blanca Paniello Castillo", "B. Paniello-Castillo", "Paniello-Castillo B.", "biomedical research", "climate change health", "gender health research", "socioeconomic health"],
     authors: [{ name: "Blanca Paniello Castillo" }],
     creator: "Blanca Paniello Castillo",
     publisher: "Blanca Paniello Castillo",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
         },
     },
     openGraph: {
-        title: "Blanca Paniello Castillo | Biomedical Researcher",
-        description: "Biomedical researcher specializing in climate change, health impacts, gender studies, and socioeconomic research",
+        title: "Blanca Paniello Castillo | Climate & Health Researcher",
+        description: "Climate & Health researcher specializing in climate change, health impacts, gender studies, and socioeconomic research",
         type: "profile",
         url: "https://blancapaniello.com",
         siteName: "Blanca Paniello Castillo Portfolio",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Blanca Paniello Castillo | Biomedical Researcher",
-        description: "Biomedical researcher specializing in climate change and health research",
+        title: "Blanca Paniello Castillo | Climate & Health Researcher",
+        description: "Climate & Health researcher specializing in climate change and health research",
         images: ["/photo/Picture_BPC.jpeg"],
     },
     alternates: {
@@ -51,8 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         "@type": "Person",
         "name": "Blanca Paniello Castillo",
         "url": "https://blancapaniello.com",
-        "jobTitle": "Biomedical Researcher",
-        "description": "Biomedical researcher specializing in climate change, health impacts, gender studies, and socioeconomic research",
+        "jobTitle": "Climate & Health Researcher",
+        "description": "Climate & Health researcher specializing in climate change, health impacts, gender studies, and socioeconomic research",
         "sameAs": [
             "https://orcid.org/0000-0002-3754-6571",
             "https://www.linkedin.com/in/blanca-paniello-castillo-a738b5114/"
