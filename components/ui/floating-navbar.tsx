@@ -28,7 +28,7 @@ export function FloatingNavbar() {
 					<NavigationMenuList>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href="#home"
+								href="/"
 								className={navigationMenuTriggerStyle()}
 							>
 								Home
