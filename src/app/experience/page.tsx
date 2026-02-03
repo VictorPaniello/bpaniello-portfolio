@@ -1,11 +1,14 @@
+import { Experience1 } from "@/components/experience1";
+
 export default function ExperiencePage() {
     return (
         <div className="relative min-h-screen">
             {/* Main Content */}
-            <main className="max-w-7xl mx-auto px-2">
-                <div>
-                    <h1>Experience</h1>
-                </div>
+            <main id="home" className="max-w-4xl mx-auto px-2">
+                {/* Hero Section */}
+                <section className="flex items-center pb-100">
+                    <Experience1 />
+                </section>
             </main>
         </div>
     );

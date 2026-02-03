@@ -17,7 +17,7 @@ export default function PublicationsPage() {
     const sortedYears = Object.keys(groupedPublications).map(Number).sort((a, b) => b - a);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
+        <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-16 px-4">
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                     Publications

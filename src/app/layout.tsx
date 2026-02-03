@@ -6,6 +6,7 @@ import { FloatingNavbar } from "@/components/ui/floating-navbar";
 import { Contact } from '@/components/ui/contact';
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://blancapaniello.com"),
     title: "Blanca Paniello Castillo | Climate & Health Researcher",
     description: "Dr. Blanca Paniello Castillo - Climate & Health researcher specializing in climate change, health impacts, gender studies, and socioeconomic research. Explore my work, publications, and contributions.",
     keywords: ["Blanca Paniello", "Blanca Paniello Castillo", "B. Paniello-Castillo", "Paniello-Castillo B.", "biomedical research", "climate change health", "gender health research", "socioeconomic health"],
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
 
     const jsonLd = {
         "@context": "https://schema.org",
