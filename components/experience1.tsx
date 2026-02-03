@@ -14,6 +14,13 @@ interface Experience1Props {
 const Experience1 = ({ className }: Experience1Props) => {
 	const experience = [
 		{
+			period: "Sep 2025 - Now",
+			title: "PhD Fellow",
+			description:
+				"Currently pursuing my doctoral thesis titled: Socio-economic and demographic drivers of health vulnerability and climate change adaptation in Europe.",
+			company: "Barcelona Institute for Global Health (ISGlobal)",
+		},
+		{
 			period: "May 2025 - Sep 2025",
 			title: "Consultant",
 			description:
@@ -40,7 +47,7 @@ const Experience1 = ({ className }: Experience1Props) => {
 			title: "Research Assistant",
 			subtitle: "Centre of Natural Hazards and Disaster Science (CNDS)",
 			description:
-				"Finalised the publication of my Master’s thesis and supported research on climate- and risk-perception-related publications, including assistance with ethical approval processes.",
+				"Finalised the publication of my Master's thesis and supported research on climate- and risk-perception-related publications, including assistance with ethical approval processes.",
 			company: "Uppsala University",
 		},
 		{
@@ -54,10 +61,9 @@ const Experience1 = ({ className }: Experience1Props) => {
 		{
 			period: "May 2021 - Aug 2022",
 			title: "Consultant",
-			subtitle: "Global Climate and Health Alliance (GCHA)",
 			description:
 				"Performed data analysis for the Healthy NDC Scorecard, assessing country progress in integrating health into national climate commitments. Contributed to evidence synthesis and reporting.",
-			company: "Healthy NDC Working Group",
+			company: "Global Climate and Health Alliance (GCHA)",
 		},
 		{
 			period: "Dec 2019 - Jul 2021",
@@ -106,7 +112,7 @@ const Experience1 = ({ className }: Experience1Props) => {
 						Work & Research Experience
 					</h1>
 					<Button variant="ghost" size="lg" className="font-semibold hover:cursor-pointer" onClick={handleDownloadCV}>
-						CV <Download className="size-4" />
+						Download CV <Download className="size-4" />
 					</Button>
 				</div>
 				<ul>
