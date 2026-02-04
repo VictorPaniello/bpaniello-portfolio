@@ -10,7 +10,7 @@ export default function Home() {
                 {/* Hero Section */}
                 <section className="flex items-center pt-32 pb-100">
                     <div className="flex-1">
-                        <h2 className="text-5xl font-bold mb-4">Hola, hey, hej!<br />I'm Blanca!</h2>
+                        <h2 className="text-5xl font-bold tracking-tighter lg:text-6xl mb-4">Hola, hey, hej!<br />I'm Blanca!</h2>
                         <p className="text-lg text-gray-600 mb-6">
                             I am an environmental epidemiologist and biomedical scientist working on health inequalities related to climate change and adaptation, including risk perception and gender differences in risk and adaptive capacity.
                         </p>

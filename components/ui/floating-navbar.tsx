@@ -44,6 +44,14 @@ export function FloatingNavbar() {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
+								href="/education"
+								className={navigationMenuTriggerStyle()}
+							>
+								Education
+							</NavigationMenuLink>
+						</NavigationMenuItem>
+						<NavigationMenuItem>
+							<NavigationMenuLink
 								href="/articles"
 								className={navigationMenuTriggerStyle()}
 							>
