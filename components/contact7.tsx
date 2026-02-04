@@ -1,4 +1,4 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, BriefcaseBusiness, HeartHandshake } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -31,7 +31,7 @@ const Contact7 = ({
 				<div className="grid gap-6 md:grid-cols-2">
 					<div className="rounded-lg bg-muted p-6">
 						<span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full bg-accent">
-							<Mail className="h-6 w-auto" />
+							<BriefcaseBusiness className="h-6 w-auto" />
 						</span>
 						<p className="mb-1 text-lg font-semibold">{workEmailLabel}</p>
 						<p className="mb-3 text-muted-foreground">{workEmailDescription}</p>
@@ -41,7 +41,7 @@ const Contact7 = ({
 					</div>
 					<div className="rounded-lg bg-muted p-6">
 						<span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full bg-accent">
-							<Mail className="h-6 w-auto" />
+							<HeartHandshake className="h-6 w-auto" />
 						</span>
 						<p className="mb-1 text-lg font-semibold">{volEmailLabel}</p>
 						<p className="mb-3 text-muted-foreground">{volEmailDescription}</p>

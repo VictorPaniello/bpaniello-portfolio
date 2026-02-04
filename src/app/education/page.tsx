@@ -1,4 +1,4 @@
-import { Experience5 } from "@/components/experience5";
+import { Timeline9 } from "@/components/timeline9";
 
 export default function ExperiencePage() {
     return (
@@ -7,7 +7,7 @@ export default function ExperiencePage() {
             <main id="home" className="max-w-4xl mx-auto px-2">
                 {/* Hero Section */}
                 <section className="flex items-center">
-                    <Experience5 />
+                    <Timeline9 />
                 </section>
             </main>
         </div>

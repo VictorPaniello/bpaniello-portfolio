@@ -8,9 +8,7 @@ import {
 	navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
+import { Mail } from 'lucide-react'
 
 export function FloatingNavbar() {
 	    
@@ -79,10 +77,7 @@ export function FloatingNavbar() {
 								href="#contact"
 								onClick={handleContactClick}
 								className={navigationMenuTriggerStyle()}
-							><FontAwesomeIcon icon={faEnvelope} bounce style={{
-								'--fa-animation-delay': '2s',
-								'--fa-animation-iteration-count': '3',
-							} as any} />
+							><Mail className="h-4 w-4"/>
 								&nbsp;Contact
 							</NavigationMenuLink>
 						</NavigationMenuItem>
