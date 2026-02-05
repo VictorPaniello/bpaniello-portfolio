@@ -106,32 +106,32 @@ const Experience1 = ({ className }: Experience1Props) => {
 
 	return (
 		<section className={cn("py-32", className)}>
-			<div className="container space-y-10 lg:space-y-20">
+			<div className="container space-y-10 lg:space-y-20 tracking-tighter">
 				<div className="flex w-full items-end justify-around">
-					<h1 className="text-4xl font-semibold tracking-tighter lg:text-6xl">
+					<h1 className="text-4xl font-semibold lg:text-6xl">
 						Work & Research Experience
 					</h1>
 					<Button variant="ghost" size="lg" className="font-semibold hover:cursor-pointer" onClick={handleDownloadCV}>
 						CV <Download className="size-4" />
 					</Button>
 				</div>
-				<ul>
+				<ul className="">
 					{experience.map((exp, index) => (
 						<li
 							key={index}
 							className="flex flex-col justify-between border-b py-10 md:flex-row"
 						>
-							<div className="max-w-lg text-xl font-semibold tracking-tighter lg:w-1/4">
+							<div className="max-w-lg text-xl font-semibold lg:w-1/4">
 								{exp.period}
 							</div>
 							<div className="lg:w-1/2">
-								<h2 className="mb-1 text-2xl font-semibold tracking-tighter">
+								<h2 className="mb-1 text-2xl font-semibold">
 									{exp.title}
 								</h2>
-								<h3 className="mb-4 text-1xl tracking-tighter italic">
+								<h3 className="mb-4 text-1xl  italic">
 									{exp.subtitle}
 								</h3>
-								<p className="text-foreground/80">{exp.description}</p>
+								<p className="text-foreground/80 ">{exp.description}</p>
 								<p className="text-foreground/50 italic mt-2">{exp.additional}</p>
 							</div>
 							<div className="text-right lg:w-1/5">{exp.company}</div>
