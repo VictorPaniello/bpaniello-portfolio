@@ -14,7 +14,7 @@ interface Experience1Props {
 const Experience1 = ({ className }: Experience1Props) => {
 	const experience = [
 		{
-			period: "Sep 2025 - Now",
+			period: "Sep 2023 - Now",
 			title: "PhD Fellow",
 			description:
 				"Currently pursuing my doctoral thesis titled: Socio-economic and demographic drivers of health vulnerability and climate change adaptation in Europe.",

@@ -34,18 +34,18 @@ export function FloatingNavbar() {
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink
-								href="/experience"
-								className={navigationMenuTriggerStyle()}
-							>
-								Experience
-							</NavigationMenuLink>
-						</NavigationMenuItem>
-						<NavigationMenuItem>
-							<NavigationMenuLink
 								href="/education"
 								className={navigationMenuTriggerStyle()}
 							>
 								Education
+							</NavigationMenuLink>
+						</NavigationMenuItem>
+						<NavigationMenuItem>
+							<NavigationMenuLink
+								href="/experience"
+								className={navigationMenuTriggerStyle()}
+							>
+								Experience
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
