@@ -56,6 +56,7 @@ export function FloatingNavbar() {
 								Articles
 							</NavigationMenuLink>
 						</NavigationMenuItem>
+						{/*
 						<NavigationMenuItem>
 							<NavigationMenuLink
 								href="/media"
@@ -64,6 +65,7 @@ export function FloatingNavbar() {
 								Media
 							</NavigationMenuLink>
 						</NavigationMenuItem>
+						*/}
 						<NavigationMenuItem>
 							<NavigationMenuLink
 								href="/volunteering"
