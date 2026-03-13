@@ -1,6 +1,6 @@
 import { Timeline9 } from "@/components/timeline9";
 
-export default function ExperiencePage() {
+export default function EducationPage() {
     return (
         <div className="relative min-h-screen">
             {/* Main Content */}

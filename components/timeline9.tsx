@@ -97,7 +97,7 @@ interface Timeline9Props {
 const Timeline9 = ({ className }: Timeline9Props) => {
 	return (
 		<section className={cn("py-32", className)}>
-			<div className="container space-y-10 lg:space-y-20 tracking-tighter">
+			<div className="container max-w-4xl mx-auto space-y-10 lg:space-y-20 tracking-tighter">
 				<h1 className="text-center text-4xl font-semibold text-foreground sm:text-6xl">
 					Education
 				</h1>
@@ -109,7 +109,7 @@ const Timeline9 = ({ className }: Timeline9Props) => {
 					{timelineData.map((entry, index) => (
 						<div key={index} className="relative mb-10 pl-8">
 							<div className="absolute top-3.5 left-0 flex size-4 items-center justify-center rounded-full bg-foreground" />
-							<h4 className="rounded-xl py-2 text-xl text-foreground font-bold xl:mb-2 xl:px-3">
+							<h4 className="rounded-xl py-2 text-xl text-foreground font-semibold xl:mb-2 xl:px-3">
 								{entry.title}
 							</h4>
 							<h4 className="rounded-xl py text-sm text-muted-foreground font-semibold mb-2 xl:mb-2 xl:px-3">

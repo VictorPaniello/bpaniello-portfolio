@@ -2,8 +2,9 @@ export const articles = [
     {
         name: "Research on X",
         description: "Brief description of the article",
-        type: "research",
+        type: "Research",
         status: "completed",
+        authors: ["Author A", "Author B"],
         links: {
             website: "https://example.com",
             doi: "10.1234/example",
@@ -14,8 +15,9 @@ export const articles = [
     {
         name: "Clinical Trial Y",
         description: "Another article description",
-        type: "clinical-trial",
+        type: "Clinical trial",
         status: "active",
+        authors: ["Author C", "Author D"],
         links: {
             website: "https://example.com/trial",
         },

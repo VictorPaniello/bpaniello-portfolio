@@ -106,9 +106,9 @@ const Experience1 = ({ className }: Experience1Props) => {
 
 	return (
 		<section className={cn("py-32", className)}>
-			<div className="container space-y-10 lg:space-y-20 tracking-tighter">
+			<div className="container max-w-4xl mx-auto space-y-10 lg:space-y-20 tracking-tighter">
 				<div className="flex w-full items-end justify-around">
-					<h1 className="text-4xl font-semibold lg:text-6xl">
+					<h1 className="text-4xl text-center font-semibold lg:text-6xl">
 						Work & Research Experience
 					</h1>
 					<Button variant="ghost" size="lg" className="font-semibold hover:cursor-pointer" onClick={handleDownloadCV}>
